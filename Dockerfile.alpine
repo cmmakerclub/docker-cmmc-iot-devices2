@@ -2,11 +2,11 @@ FROM alpine:latest
 MAINTAINER Nat Weerawan <@nazt>
 
 RUN apk update
-RUN apk add --update openssl
-RUN apk add ca-certificates
-RUN update-ca-certificates
 RUN apk add --update darkhttpd
-RUN apk add --update jq
+#RUN apk add --update openssl
+#RUN apk add ca-certificates
+#RUN update-ca-certificates
+#RUN apk add --update jq
 
 RUN mkdir -p /home/www
 RUN rm -rf /var/cache/apk/*
