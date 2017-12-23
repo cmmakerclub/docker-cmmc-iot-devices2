@@ -14,6 +14,12 @@ RUN rm -rf /var/cache/apk/*
 COPY ./www/ /home/www/
 ADD ./run.sh /root/run.sh 
 
+ENV MQTT_HOST=q.cmmc.io
+ENV MQTT_TOPIC_FILTER=MARU\\/#
+ENV MQTT_WS_PORT=51883
+
+WORKDIR /home/www
+
 EXPOSE 8080
 
 CMD ["/root/run.sh"]
